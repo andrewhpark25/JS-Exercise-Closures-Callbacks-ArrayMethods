@@ -218,18 +218,12 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function getRunnersByTShirtSize(runners, tShirtSize) {
-  const filterSize =
- runners.filter(function(item) {
-   return item.shirt_size === tShirtSize;
- })
- return filterSize;
-}
+
 
 function processDuplicateFree(list, callback) {
   /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
   const duplicateFree = list.filter((a,b) => list.indexOf(a) === b)
-  return duplicateFree;
+  return callback(duplicateFree);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
